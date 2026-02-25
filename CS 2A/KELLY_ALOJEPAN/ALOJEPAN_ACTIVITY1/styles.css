@@ -1,0 +1,10 @@
+:root{
+    --background-color: #000000;
+    --primary-color: #2AFB00;
+    --secondary-color: #FFFFFF;
+    --primary-font: 'Share Tech Mono';
+    --secondary-font: 'Jetbrains Mono';
+}
+a{
+    font-family: var(--primary-font);
+}
