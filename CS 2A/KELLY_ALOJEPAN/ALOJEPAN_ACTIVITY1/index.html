@@ -11,7 +11,7 @@
 </head>
 <body>
     <main>
-        <header>
+        <header class="nav-header">
             <a class="logo" href="/">
                 itsKhel.
             </a>
@@ -251,5 +251,29 @@
 
         </section>
     </main>
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('hidden');
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                // Scrolling down
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up
+                header.classList.remove('hidden');
+                header.classList.add('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+        </script>
 </body>
 </html>
